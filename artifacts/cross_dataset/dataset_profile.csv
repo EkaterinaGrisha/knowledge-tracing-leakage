@@ -1,0 +1,8 @@
+dataset,n_questions_total,n_components_total,max_kc_per_question,kc_per_question_mean,n_test_rows,repeat_row_share
+assist2012,53070,265,1,1.0,536087,0.0
+assist2015,,100,1,1.0,134592,0.0
+assist2017,3162,102,1,1.0,177767,0.0
+bridge2algebra2006,129263,493,5,1.0036,353631,0.0035
+assist2009,17737,123,4,1.1844,61904,0.1557
+algebra2005,173113,112,7,1.4472,134674,0.309
+ednet,11901,188,7,2.2745,301372,0.5603
