@@ -7,7 +7,7 @@
 ## Что здесь есть
 
 ```
-artifacts/cross_dataset/   десять CSV — источник всех чисел статьи
+artifacts/cross_dataset/   двенадцать CSV — источник всех чисел статьи
 scripts/                   код, который эти CSV производит, и генератор рисунков
 ktx/                       разрешение путей, от которого зависят сценарии
 ```
@@ -25,6 +25,7 @@ ktx/                       разрешение путей, от которог�
 | табл. 3 | `leakage_model_prediction.csv`, `leakage_model_prediction_summary.csv` |
 | табл. 4, табл. 5, рис. 1, рис. 3 | `leakage_by_repeat.csv`, `leakage_by_repeat_summary.csv` |
 | табл. 6 | `seed_robustness.csv`, `seed_robustness_summary.csv` |
+| п. 6.2, выравнивание строк | `leakage_row_alignment.csv`, `leakage_row_alignment_summary.csv` |
 
 ## Проверка чисел статьи
 
@@ -66,8 +67,9 @@ python -m scripts.build_dataset_profile
 моделей — 140 файлов
 общим объёмом около 1.6 ГБ, которые в репозиторий не помещены. Для их получения
 нужны семь исходных наборов данных, форк библиотеки pyKT и обученные модели.
-Сценарий `leakage_by_repeat.py` дополнительно читает файлы `test_sequences.csv`
-из каталога данных pyKT; путь к нему задаётся переменной окружения `KT_PYKT_ROOT`.
+Сценарии `leakage_by_repeat.py` и `leakage_row_alignment.py` дополнительно читают
+файлы `test_sequences.csv` и `test.csv` из каталога данных pyKT; путь к нему задаётся
+переменной окружения `KT_PYKT_ROOT`.
 
 Таким образом, репозиторий позволяет проверить, что приведённые в статье числа
 действительно содержатся в артефактах и что рисунки построены именно по ним,
